@@ -1,0 +1,18 @@
+#background{
+  overflow: hidden;
+  background: url("../img/bg-gallery.jpg") no-repeat;
+  background-size: cover;
+  position: fixed;
+
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+.modal-dialog {
+  width:600px;
+}
+.thumbnail {
+  margin-top: 10%;
+  margin-bottom:6px;
+}
