@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 use Session;
+use Image;
 
 class PostController extends Controller
 {
@@ -51,6 +52,16 @@ class PostController extends Controller
 
         $post->title = $request->title;
         $post->body = $request->body;
+
+        if($request->hasFile('featured_image'))
+        {
+          $image = $request->file('featured_image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          $location = public_path('images/'. $filename);
+          Image::make($image)->resize(200, 200)->save($location);
+
+          $post->image = $filename;
+        }
 
         $post->save();
 
