@@ -6,6 +6,8 @@ use App\Post;
 use Illuminate\Http\Request;
 use Session;
 use Image;
+use Storage;
+use File;
 
 class PostController extends Controller
 {
@@ -45,7 +47,8 @@ class PostController extends Controller
         //validation
         $this->validate($request, array(
             'title' => 'required|max:255',
-            'body' => 'required'
+            'body' => 'required',
+            'featured_image' => 'image'
         ));
         //store
         $post = new Post;
@@ -106,12 +109,26 @@ class PostController extends Controller
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
-            'body' => 'required'
+            'body' => 'required',
+            'featured_image' => 'image'
         ));
         //edit posts
+
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+
+
+        if ($request->hasFile('featured_image'))
+          {
+            $image = $request->file('featured_image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' . $filename);
+            Image::make($image)->resize(200, 200)->save($location);
+            $oldFilename = $post->image;
+            $post->image = $filename;
+            Storage::delete($oldFilename);
+          }
 
         $post->save();
 
@@ -129,6 +146,7 @@ class PostController extends Controller
     public function destroy($id)
     {
        $post = Post::find($id);
+       Storage::delete($post->image);
        $post->delete();
 
        Session::flash('success', 'News zostal usuniety');

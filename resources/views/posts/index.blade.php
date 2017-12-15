@@ -19,9 +19,9 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>#</th>
-                    <th>Tytul</th>
-                    <th>Tresc</th>
+                    <th>Zdjęcie</th>
+                    <th>Tytuł</th>
+                    <th>Treść</th>
                     <th>Utworzono</th>
                     <th></th>
                 </tr>
@@ -29,10 +29,10 @@
             <tbody>
             @foreach($posts as $post)
 
-                
+
                 <tr>
                     <td scope="row"></td>
-                    <td>{{ $post->id }}</td>
+                    <td><img src="{{ asset('images/'. $post->image) }}" alt="" style="width:70px; heigh:70px;"></td>
                     <td>{{ $post->title }}</td>
                     <td>{{ substr( $post->body, 0, 50) }}{{ strlen($post->body)>50 ? "...":"" }}</td>
                     <td>{{ date('j-m-Y H:i', strtotime($post->created_at)) }}</td>

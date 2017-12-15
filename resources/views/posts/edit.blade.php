@@ -3,7 +3,7 @@
 @section('title', '| Edit Post')
 
 @section('content')
-{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT' ]) !!}
+{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true ]) !!}
 <div class="row">
 
     <div class="col-md-8">
@@ -11,6 +11,8 @@
             {!! Form::text('title', null, ['class' => 'form-control input-lg'])!!}
             {!! Form::label('body', 'Tresc:') !!}
             {!! Form::textarea('body', null, ['class' => 'form-control'])!!}
+            {!! Form::label('featured_image', 'Edytuj zdjęcie') !!}
+            {!! Form::file('featured_image') !!}
     </div>
         <div class="col-md-4">
             <div class="card card-body bg-ligh" style="background-color: #EFEFEF; padding:10px;">
