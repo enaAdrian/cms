@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/modal.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -21,24 +22,19 @@
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                    Strona Główna
-                    </a>
+
+
+                    <ul class="nav navbar-nav">
+                      <li><a href="{{ url('/') }}">Strona Głowna</a></li>
+                      <li><a href="{{ url('posts') }}">Newsy</a></li>
+                      <li><a href="{{ url('posts/create') }}">Dodaj Newsa</a></li>
+                    </ul>
+
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -70,7 +66,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="container">
             @yield('content')
+          </div>
         </nav>
 
     </div>

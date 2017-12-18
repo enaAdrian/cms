@@ -15,9 +15,12 @@ Auth::routes();
 Route::get('/', ['as' => 'welcome', 'uses' => 'NewsController@index' ]);
 Route::get('/about', 'PagesController@getAbout');
 Route::get('/contact', 'PagesController@getContact');
-Route::get('/gallery', 'PagesController@getGallery');
+Route::get('/gallery', ['as' => 'gallery', 'uses' => 'PagesController@getGallery']);
+Route::resource('media', 'MediaController');
+
 
 Route::middleware(['auth'])->group(function(){
   Route::resource('posts', 'PostController');
+
   Route::get('/home', 'HomeController@index')->name('home');
 });

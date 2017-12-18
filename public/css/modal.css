@@ -2,12 +2,19 @@
   overflow: hidden;
   background: url("../img/bg-gallery.jpg") no-repeat;
   background-size: cover;
-  position: fixed;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
 
   /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
+}
+#gallery a img {
+  width: 350px;
+  height: 230px;
+
 }
 .modal-dialog {
   width:600px;
@@ -15,4 +22,45 @@
 .thumbnail {
   margin-top: 10%;
   margin-bottom:6px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 48px;
+  color: rgb(19, 149, 186);
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;;
+}
+h2 {
+  font-size: 38px;
+  color: rgb(19, 149, 186);
+  font-weight: 300;
+  font-family: "Cabin",Helvetica Neue,sans-serif;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 400;
+  color: rgb(19, 149, 186);
+  font-family: "Cabin",Helvetica Neue,sans-serif;
+}
+p {
+  font-size: 15px;
+  line-height: 28px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a,
+a:active,
+a:focus,
+a:active {
+  text-decoration: none !important;
 }

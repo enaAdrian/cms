@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dominik</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/owl.carousel.css">
     <link rel="stylesheet" href="/css/bootstrap3.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="/css/ionicons.min.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footer-with-social-icons.css">
     <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/js/bootstrap.min.js"></script>
@@ -20,6 +22,7 @@
     <script src="/js/min/waypoints.min.js"></script>
     <script src="/js/jquery.counterup.js"></script>
     <script src="/js/google-map-init.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/video.js"></script>
 
@@ -28,7 +31,7 @@
 
     <!-- Header -->
   <header>
-    <div class="container">
+    <div class="nav-container">
       <div class="row">
         <div class="col-md-12">
 
@@ -49,11 +52,12 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Autor</a></li>
-                    <li><a href="work.html">Aktualności</a></li>
-                    <li><a href="#">Dyskografia</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="{{route ('welcome')}}">Strona Główna</a></li>
+                    <li><a href="#autor">Autor</a></li>
+                    <li><a href="#aktual">Aktualności</a></li>
+                    <li><a href="#dysko">Dyskografia</a></li>
+                    <li><a href="{{route ('gallery') }}">Galeria</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
                   </ul>
                 </div>
               </div>
@@ -100,13 +104,16 @@
     <div class="homepage-hero-module">
     <div class="video-container">
         <div class="title-container">
-          <div class="row">
-                    <div class="col-md-10 col-md-offset-2">
-                      <div class="block">
-                        <h1 class="animated fadeInUp">Dominik Kozicki</h1>
-                        <p class="animated fadeInUp">Oficjalna strona</p>
+          <div name="klip">
+            <div class="row">
+
+                      <div class="col-md-10 col-md-offset-2">
+                        <div class="block">
+                          <h1 class="animated fadeInUp">Dominik Kozicki</h1>
+                          <p class="animated fadeInUp">Oficjalna strona</p>
+                        </div>
                       </div>
-                    </div>
+            </div>
           </div>
         </div>
         <div class="filter"></div>
@@ -124,6 +131,7 @@
         <div class="row">
           <div class="col-md-7 col-sm-12">
             <div class="block">
+              <a name="autor"></a>
               <div class="section-title">
                 <h2>O mnie</h2>
                 <p><span style="color: #808080;">W 2006 r. pojawił się na scenie muzycznej Dominik Kozicki Dave jako jeden z wykonawc&oacute;w <a href="http://www.youtube.com/watch?v=2k-NcAfCGoc" target="_blank">studenckiej grupy perkusyjnej</a> Akademii Muzycznej w Poznaniu, na co dzień posiadającej w swoim repertuarze utwory <a href="http://www.youtube.com/watch?v=nmzyl8Fu4c8" target="_blank">klasyki perkusyjnej</a>. Będąc studentem III roku klasy perkusji, w 2008 r. zdobył I nagrodę ABSOLUTE w kategorii werbla i III nagrodę w kategorii DRUM SET (Jury w tej kategorii I nagrody nie przyznało) na VI Międzynarodowym Konkursie Perkusyjnym w Fermo we Włoszech. Zainteresowania muzyczne Dominika wykraczają poza uczelniane mury. W domowym studio tworzy projekty muzyki perkusyjnej, kt&oacute;re cechuje szeroka kolorystyka brzmieniowa, rytmika i zr&oacute;żnicowanie stylistyczne. Jest muzykiem poszukującym. Fascynują go r&oacute;żne style oraz zabawa z dźwiękiem. Inspiracje muzyczne czerpie z otaczającej natury i brzmienia instrument&oacute;w. To właśnie walory brzmieniowe instrumentu decydują o wyborze stylistyki w trakcie tworzenia nowego utworu. Muzyk jest wierny klawiszom. Pianino elektroniczne, syntezatory to kolejne pasje, kt&oacute;re rozwija &bdquo;po godzinach&rdquo; &ndash; najczęściej w nocy gdy zasady wsp&oacute;łżycia społecznego ograniczają możliwość grania na dynamicznych bębnach. Miłość do muzyki klawiszowej zrodziła się w dzieciństwie gdy Dominik odkrył taśmy z nagraniami nadanymi na przełomie lat 80 w audycjach radiowych Programu III PR. Od 2002 r. tworzy także muzykę ilustracyjną. </span></p>
@@ -155,6 +163,7 @@
     <section id="service">
       <div class="container">
         <div class="row">
+          <a name="aktual"></a>
           <div class="section-title">
             <h2>Aktualności</h2>
 
@@ -216,10 +225,30 @@
     <section id="call-to-action">
       <div class="container">
         <div class="row">
+          <a name="dysko"></a>
           <div class="col-md-12">
             <div class="block">
               <h2>Dyskografia Dominika Kozickiego</h2>
-              <p>Lorem ipsum dolor si amt, conetur aipicing eit, do eiusmod temr incidunt ut or si amt, conetur aipicin amet, conetur aipicing ei  amet, conetur aipicing ei</p>
+              <p>2017 r. Singel (CD) „Ósmy zmysł” Dominik Kozicki & Rock Friends.<br>
+2016 r. Singel (CD) „Euforia” Dominik Kozicki & Rock Friends.<br>
+2015 r. Singel (CD) „Kredo” Dominik Kozicki & Rock Friends.<br>
+2014 r. Singel (CD) „Wolnością bądź” Dominik Kozicki & Rock Friends.<br>
+2014 r. Singel (CD) „Blue” Dominik Kozicki & Daria Kutkowska.<br>
+2014 r. Singel (CD) „Inside” Dominik Kozicki & Rock Friends.<br>
+2013 r. Płyta (DVD) Dominik Kozicki and Rock Friends - Live (gościnnie Marek Piekarczyk).<br>
+2012 r. Album (CD) „Look Behind” Dominik Kozicki and Session Rock Friends (gościnnie Marek Piekarczyk).<br>
+2012 r. (DVD) wideoklip do utworu pt. „Życie Nali” pochodzącego z płyty OKNA CZASU.<br>
+2012 r. Singel (CD) pt. „My z XX wieku” z utworem promującym płytę LOOK BEHIND nagranej pod szyldem  Dominik Kozicki & Session Rock Friends.<br>
+
+2010 r. Singel (CD) pt. „W imię króla” z utworem autorstwa Dominika Kozickiego promującym płytę OKNA CZASU oraz THE WINDOWS OF TIME.<br>
+
+2010 r. Maxi-singel (CD) pt. „The Dawn” – z utworami autorstwa Dominika Kozickiego promującymi płytę THE WINDOWS OF TIME.<br>
+2010 r. Album (CD) pt. „The Windows of Time” reedycja płyty OKNA CZASU.
+2008 r. (DVD) wideoklip do utworu pt. „Daimonion” - dodatek do płyty OKNA CZASU.<br>
+2006 r. Album (CD) pt. OKNA CZASU.
+2004 r. Płyta (CD) „Okna czasu - Demo” z utworami autorstwa Dominika Kozickiego.<br>
+
+</p>
               <a class="btn btn-default btn-call-to-action" href="#" >Multimedia</a>
             </div>
           </div>
@@ -230,31 +259,62 @@
     <section id="testimonial">
       <div class="container">
         <div class="row">
+          
           <div class="section-title text-center">
-            <h2>Kontakt</h2>
-            <p>Lorem ipsum dolor si amt, conetur aipicing eit, do eiusmod temr incidunt ut or si amt, conetur aipicin amet, conetur aipicing ei  amet, conetur aipicing ei</p>
+            <h2>Zamów Płytę</h2><br>
+            <p>Płyta "Okna czasu"<br>
+               Płyta "The Dawn"<br>
+               Album "Look Behind"<br></br>
+               Płytę CD (studyjną) + DVD (live) można uzyskać drogą wysyłkową <br>
+               poprzez zamówienie kierowane do Wydawnictwa Fonograficznego KK&D Records,<br>
+                pod adres e-mail: elgalespl@gmail.com<br>
+            </p>
+            <br>
+            <a href="" class="btn btn-primary btn-lg"  role="button">Zamów</a>
           </div>
         </div>
       </div>
     </section>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">O mnie</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Dyskografia</a></li>
-              </ul>
-            </div>
-            <p>Copyright &copy; <a href="">ENA</a>.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <a name="kontakt"></a>
+@extends('partrials.footer')
 
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  <script type="text/javascript">$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 </body>
 </html>

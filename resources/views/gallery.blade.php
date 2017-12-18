@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dominik</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/owl.carousel.css">
     <link rel="stylesheet" href="/css/bootstrap3.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="/css/ionicons.min.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/footer-with-social-icons.css">
     <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/js/bootstrap.min.js"></script>
@@ -28,7 +30,7 @@
 
     <!-- Header -->
   <header>
-    <div class="container">
+    <div class="nav-container">
       <div class="row">
         <div class="col-md-12">
 
@@ -49,11 +51,10 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Autor</a></li>
-                    <li><a href="#">Aktualności</a></li>
-                    <li><a href="#">Dyskografia</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="{{route ('welcome')}}">Strona Główna</a></li>
+                    <li><a href="">Multimedia</a></li>
+                    <li><a href="{{route ('gallery') }}">Galeria</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
                   </ul>
                 </div>
               </div>
@@ -68,18 +69,20 @@
   <div class="container">
     <div class="row">
       <div class="row">
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 1"><img src="//placehold.it/600x350" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 2"><img src="//placehold.it/600x350/2255EE" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 3"><img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 4"><img src="//placehold.it/600x350/992233" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 5"><img src="//placehold.it/600x350/2255EE" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 6"><img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 8"><img src="//placehold.it/600x350/777" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 9"><img src="//placehold.it/600x350/992233" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 10"><img src="//placehold.it/600x350/EEE" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 11"><img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 12"><img src="//placehold.it/600x350/DDD" class="thumbnail img-responsive"></a></div>
-        <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 13"><img src="//placehold.it/600x350/992233" class="thumbnail img-responsive"></a></div>
+          <div id="gallery">
+          {{-- <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 1"><img src="../img/gal_1.jpg" class="thumbnail img-responsive"></a></div> --}}
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 2"><img src="../img/gal_2.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 3"><img src="../img/gal_3.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 4"><img src="../img/gal_4.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 5"><img src="../img/gal_5.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 6"><img src="../img/gal_6.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 7"><img src="../img/gal_7.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 8"><img src="../img/gal_8.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 9"><img src="../img/gal_9.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 10"><img src="../img/gal_10.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 11"><img src="../img/gal_11.jpg" class="thumbnail img-responsive"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="zdjęcie 12"><img src="../img/gal_12.jpg" class="thumbnail img-responsive"></a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -100,6 +103,8 @@
    </div>
   </div>
 </div>
+<a name="kontakt"></a>
+@extends('partrials.footer')
 </body>
 <script type="text/javascript">
 $('.thumbnail').click(function(){

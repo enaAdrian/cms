@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layouts.navbar')
 
 @section('title', '| All Posts')
 
@@ -6,10 +6,10 @@
 
 <div class="row">
     <div class="col-md-10">
-        <h1>Wszystkie Newsy</h1>
+        <h2>Wszystkie Newsy</h2>
     </div>
-    <div class="col-md-2">
-        <a href="{{ route('posts.create') }}" class="btn btn-lg btn-block btn-primary"  role="button">Dodaj Newsa</a>
+    <div class="col-md-2" >
+        <a href="{{ route('posts.create') }}" class="btn btn-lg btn-block btn-primary" role="button">Dodaj Newsa</a>
     </div>
     <hr>
 </div>
