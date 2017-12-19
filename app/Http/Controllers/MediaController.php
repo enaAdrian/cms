@@ -20,8 +20,8 @@ class MediaController extends Controller
     public function index()
     {
       // $madias = new \App\Media();
-       $medias = Media::orderBy('id', 'desc')->paginate(10);
-      return view('media.index')->withPosts($medias);
+      //  $medias = Media::orderBy('id', 'desc')->paginate(10);
+      // return view('medias.index')->withPosts($medias);
 
     }
 
@@ -32,7 +32,7 @@ class MediaController extends Controller
      */
     public function create()
     {
-        return view('media.create');
+        return view('medias.create');
     }
 
     /**

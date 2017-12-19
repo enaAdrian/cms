@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-            {{-- @foreach($medias as $media)
+            @foreach($medias as $media)
 
 
                 <tr>
@@ -44,7 +44,7 @@
                     <td></td>
                 </tr>
 
-            @endforeach --}}
+            @endforeach
             </tbody>
         </table>
     </div>

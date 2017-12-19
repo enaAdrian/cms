@@ -10,8 +10,8 @@
   <div class="row">
     <div class="col-md-5 col-md-offset-4" >
       <a href="{{ route('posts.index') }}" class="btn btn-primary btn-lg"  role="button">Newsy</a>
-      <a href="" class="btn btn-primary btn-lg"  role="button">Multimedia</a>
-      <a href="" class="btn btn-primary btn-lg"  role="button">Dyskografia</a>
+      <a href="{{ route('media.index') }}" class="btn btn-primary btn-lg"  role="button">Multimedia</a>
+      <a href="{{ route('discography.index') }}" class="btn btn-primary btn-lg"  role="button">Dyskografia</a>
     </div>
   </div>
 </div>

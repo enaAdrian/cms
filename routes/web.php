@@ -17,6 +17,7 @@ Route::get('/about', 'PagesController@getAbout');
 Route::get('/contact', 'PagesController@getContact');
 Route::get('/gallery', ['as' => 'gallery', 'uses' => 'PagesController@getGallery']);
 Route::resource('media', 'MediaController');
+Route::resource('discography', 'DiscographyController');
 
 
 Route::middleware(['auth'])->group(function(){
