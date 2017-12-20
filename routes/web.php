@@ -12,8 +12,7 @@
 */
 Auth::routes();
 
-Route::get('/', ['as' => 'welcome', 'uses' => 'NewsController@index' ]);
-Route::get('/about', 'PagesController@getAbout');
+Route::get('/', ['as' => 'welcome', 'uses' => 'NewsController@index']);
 Route::get('/contact', 'PagesController@getContact');
 Route::get('/gallery', ['as' => 'gallery', 'uses' => 'PagesController@getGallery']);
 Route::resource('media', 'MediaController');

@@ -26,6 +26,25 @@
     <script src="/js/main.js"></script>
     <script src="/js/video.js"></script>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	var maxLength = 300;
+	$(".show-read-more").each(function(){
+		var myStr = $(this).text();
+		if($.trim(myStr).length > maxLength){
+			var newStr = myStr.substring(0, maxLength);
+			var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+			$(this).empty().html(newStr);
+			$(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+			$(this).append('<span class="more-text">' + removedStr + '</span>');
+		}
+	});
+	$(".read-more").click(function(){
+		$(this).siblings(".more-text").contents().unwrap();
+		$(this).remove();
+	});
+});
+</script>
 </head>
 <body>
 
@@ -66,41 +85,6 @@
         </div>
       </div>
     </header>
-
-    <!-- Slider -->
-    <!-- <section id="slider">
-
-        <div class="container">
-
-          <div class="homepage-hero-module">
-            <div class="video-container">
-                <div class="title-container">
-                    <div class="headline">
-                          <h1>Welcome to our Company</h1>
-
-                    </div>
-                    <div class="description">
-                        <div class="inner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    </div>
-                </div>
-                <div class="filter"></div>
-                <video autoplay loop class="fillWidth">
-                    <source src="video/source.mov" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
-                <div class="poster hidden">
-                    <img src="/img/slider_bg_dominik.jpg" alt="">
-                </div>
-            </div>
-          </div>
-            <div class="row">
-                  <div class="col-md-10 col-md-offset-2">
-                    <div class="block">
-                      <h1 class="animated fadeInUp">Dominik Kozicki <br> Muzyk</h1>
-                      <p class="animated fadeInUp">Oficjalna strona </p>
-                    </div>
-                  </div>
-            </div>
-          </div>
-    </section> -->
     <div class="homepage-hero-module">
     <div class="video-container">
         <div class="title-container">
@@ -118,7 +102,7 @@
         </div>
         <div class="filter"></div>
         <video autoplay loop class="fillWidth">
-            <source src="video/source.mov" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
+            <source src="video/source.mov" type="video/mp4" />Przeglądarka nie obługuje tego video. Sugerujemy aktualizację przeglądarki</video>
         <div class="poster hidden">
             <img src="/img/slider_bg_dominik.jpg" alt="">
         </div>
@@ -153,7 +137,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-6">
           <p><span style="color: #d0d0d0;">Część jego utwor&oacute;w znalazła się na płytach &bdquo;<a href="multimedia.html">Okna czasu</a>&rdquo;, ponadto na poszerzonej wersji tego albumu "The Windows of Time" oraz (maxi-singlu) "The Dawn" - wydanych (w oparciu o własny budżet) przez Wydawnictwo Fonograficzne <a href="kontakt--wydawca.html">KK&amp;D Records</a>. Muzyka zawarta na tych krążkach odsłania wnętrze kreatywnego autora, aranżera i instrumentalisty..W 2011 r. wprowadza w życie plan nagrania kolejnego albumu z rockowymi utworami przełomu lat 60 i 70 ubiegłego wieku. Projekt powstał z myślą o ocaleniu od zapomnienia wspaniałej muzyki cenionych tw&oacute;rc&oacute;w i wykonawc&oacute;w, m.in.: Led Zeppelin, Deep Purple, Brainbox, Breakout, Czerwone Gitary. Dominik nagrał płytę wsp&oacute;łpracując z wokalistami i instrumentalistami r&oacute;żnych pokoleń (podkarpackiej i krajowej sceny muzycznej). Premierę albumu poprzedziło wydanie singla z (budzącą emocje) wersją utworu pt. "<a href="http://www.youtube.com/watch?v=h-J-4mDqoQM">My z XX wieku</a>" <a href="http://m.trojmiasto.pl/rozrywka/Klenczon-poemat-rockowy-imp303798.html">Krzysztofa Klenczona</a>. W nagraniu płyty wziął udział <a href="http://marekpiekarczyk.pl/">Marek Piekarczyk</a> (TSA) - wokalista, kt&oacute;ry na stałe zapisał się w historii polskiego Rock and Rolla.<br /></span></p>
-          <a href="work.html" class="btn btn-view-works">Albumy</a>
+          <a href="" class="btn btn-view-works">Albumy</a>
         </div>
       </div>
     </div>
@@ -181,44 +165,11 @@
               <div class="service-item" >
                         <h3>{{$post->title}}</h3>
                         <h5><small>Opublikowano: {{date('j-m-Y', strtotime($post->created_at))}}</small></h5>
-                        <p>{{ substr($post->body, 0, 220) }} {{ strlen($post->body) > 220 ? '...' : "" }}</p>
-                        {{-- <a href="{{ route('news.single', $post->id) }}">Czytaj całość</a> --}}
+                        <p class="show-read-more">{{ $post->body }}</p>
             </div>
           </div>
         </div>
         @endforeach
-        {{-- <div class="row ">
-          <div class="col-sm-3">
-            <div class="service-item">
-              <div class="circular"><img src="../img/logo2.png" alt="img"/>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-sm-9">
-            <div class="service-item">
-
-              <p>Lorem ipsum dolor si amt, conetur aipicing eit, do eiusmod temr incidunt ut or si amt, conetur aipicin amet, conetur aipicing ei  amet, conetur aipicing ei </p>
-
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div class="row ">
-          <div class="col-sm-3">
-            <div class="service-item">
-              <div class="circular"><img src="../img/logo2.png" alt="img"/>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-sm-9">
-            <div class="service-item">
-
-              <p>Lorem ipsum dolor si amt, conetur aipicing eit, do eiusmod temr incidunt ut or si amt, conetur aipicin amet, conetur aipicing ei  amet, conetur aipicing ei </p>
-
-            </div>
-          </div>
-        </div> --}}
       </div>
     </section>
     <!-- Call to action Start -->
@@ -229,26 +180,29 @@
           <div class="col-md-12">
             <div class="block">
               <h2>Dyskografia Dominika Kozickiego</h2>
-              <p>2017 r. Singel (CD) „Ósmy zmysł” Dominik Kozicki & Rock Friends.<br>
-2016 r. Singel (CD) „Euforia” Dominik Kozicki & Rock Friends.<br>
-2015 r. Singel (CD) „Kredo” Dominik Kozicki & Rock Friends.<br>
-2014 r. Singel (CD) „Wolnością bądź” Dominik Kozicki & Rock Friends.<br>
-2014 r. Singel (CD) „Blue” Dominik Kozicki & Daria Kutkowska.<br>
-2014 r. Singel (CD) „Inside” Dominik Kozicki & Rock Friends.<br>
-2013 r. Płyta (DVD) Dominik Kozicki and Rock Friends - Live (gościnnie Marek Piekarczyk).<br>
-2012 r. Album (CD) „Look Behind” Dominik Kozicki and Session Rock Friends (gościnnie Marek Piekarczyk).<br>
-2012 r. (DVD) wideoklip do utworu pt. „Życie Nali” pochodzącego z płyty OKNA CZASU.<br>
-2012 r. Singel (CD) pt. „My z XX wieku” z utworem promującym płytę LOOK BEHIND nagranej pod szyldem  Dominik Kozicki & Session Rock Friends.<br>
+              <p>
+                {{-- 2017 r. Singel (CD) „Ósmy zmysł” Dominik Kozicki & Rock Friends.<br>
+                2016 r. Singel (CD) „Euforia” Dominik Kozicki & Rock Friends.<br>
+                2015 r. Singel (CD) „Kredo” Dominik Kozicki & Rock Friends.<br>
+                2014 r. Singel (CD) „Wolnością bądź” Dominik Kozicki & Rock Friends.<br>
+                2014 r. Singel (CD) „Blue” Dominik Kozicki & Daria Kutkowska.<br>
+                2014 r. Singel (CD) „Inside” Dominik Kozicki & Rock Friends.<br>
+                2013 r. Płyta (DVD) Dominik Kozicki and Rock Friends - Live (gościnnie Marek Piekarczyk).<br>
+                2012 r. Album (CD) „Look Behind” Dominik Kozicki and Session Rock Friends (gościnnie Marek Piekarczyk).<br>
+                2012 r. (DVD) wideoklip do utworu pt. „Życie Nali” pochodzącego z płyty OKNA CZASU.<br>
+                2012 r. Singel (CD) pt. „My z XX wieku” z utworem promującym płytę LOOK BEHIND nagranej pod szyldem  Dominik Kozicki & Session Rock Friends.<br>
 
-2010 r. Singel (CD) pt. „W imię króla” z utworem autorstwa Dominika Kozickiego promującym płytę OKNA CZASU oraz THE WINDOWS OF TIME.<br>
+                2010 r. Singel (CD) pt. „W imię króla” z utworem autorstwa Dominika Kozickiego promującym płytę OKNA CZASU oraz THE WINDOWS OF TIME.<br>
 
-2010 r. Maxi-singel (CD) pt. „The Dawn” – z utworami autorstwa Dominika Kozickiego promującymi płytę THE WINDOWS OF TIME.<br>
-2010 r. Album (CD) pt. „The Windows of Time” reedycja płyty OKNA CZASU.
-2008 r. (DVD) wideoklip do utworu pt. „Daimonion” - dodatek do płyty OKNA CZASU.<br>
-2006 r. Album (CD) pt. OKNA CZASU.
-2004 r. Płyta (CD) „Okna czasu - Demo” z utworami autorstwa Dominika Kozickiego.<br>
-
-</p>
+                2010 r. Maxi-singel (CD) pt. „The Dawn” – z utworami autorstwa Dominika Kozickiego promującymi płytę THE WINDOWS OF TIME.<br>
+                2010 r. Album (CD) pt. „The Windows of Time” reedycja płyty OKNA CZASU.
+                2008 r. (DVD) wideoklip do utworu pt. „Daimonion” - dodatek do płyty OKNA CZASU.<br>
+                2006 r. Album (CD) pt. OKNA CZASU.
+                2004 r. Płyta (CD) „Okna czasu - Demo” z utworami autorstwa Dominika Kozickiego.<br> --}}
+                @foreach($discographies as $discography)
+                    <p>{{$discography->title}}</p>
+                @endforeach
+              </p>
               <a class="btn btn-default btn-call-to-action" href="#" >Multimedia</a>
             </div>
           </div>
@@ -259,7 +213,7 @@
     <section id="testimonial">
       <div class="container">
         <div class="row">
-          
+
           <div class="section-title text-center">
             <h2>Zamów Płytę</h2><br>
             <p>Płyta "Okna czasu"<br>
@@ -287,8 +241,8 @@
   .click(function(event) {
     // On-page links
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to

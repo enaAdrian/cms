@@ -5,7 +5,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
-   
+
 }
 h1,
 h2,
@@ -318,6 +318,9 @@ header .navbar-default .navbar-nav li a {
   font-size: 14px;
   line-height: 1.8;
 }
+.show-read-more .more-text{
+    display: none;
+  }
 /*call-to-action*/
 #call-to-action {
   background: url("../img/dominik_7.jpg") no-repeat;
@@ -882,17 +885,22 @@ header .navbar-default .navbar-nav li a {
 }
 /* circular image */
 .circular {
+  background: url("../img/dominik_news.jpg") no-repeat;
   width: 200px;
 	height: 200px;
+background-size: cover;
+display: block;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
-  background: url("../img/dominik_7.jpg") no-repeat;
+
 	}
 
 .circular img {
   width: 200px;
   height: 200px;
+  background-size: cover;
+  display: block;
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Session;
 use Image;
 use Storage;
-use File;
 
 class MediaController extends Controller
 {
@@ -19,9 +18,9 @@ class MediaController extends Controller
      */
     public function index()
     {
-      // $madias = new \App\Media();
-      //  $medias = Media::orderBy('id', 'desc')->paginate(10);
-      // return view('medias.index')->withPosts($medias);
+      $medias = Media::orderBy('id', 'desc')->paginate(10);
+     return view('medias.index', compact('medias'));
+
 
     }
 
@@ -41,7 +40,7 @@ class MediaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
       //validation
       $this->validate($request, array(
@@ -69,7 +68,7 @@ class MediaController extends Controller
 
       Session::flash('success', 'News dodano poprawnie!');
 
-      return redirect()->route('media.show', $media->id);
+      return redirect()->route('medias.show', $media->id);
 
     }
 
@@ -83,7 +82,7 @@ class MediaController extends Controller
     public function show($id)
     {
       $media =  Media::find($id);
-      return view('media.show')->withPost($media);
+      return view('medias.show')->withPost($media);
     }
 
     /**
@@ -95,7 +94,7 @@ class MediaController extends Controller
     public function edit($id)
     {
       $media = Media::find($id);
-      return view('media.edit')->withPost($media);
+      return view('medias.edit')->withPost($media);
     }
 
     /**
@@ -134,7 +133,7 @@ class MediaController extends Controller
 
       Session::flash('success', 'News zostal edytowany');
 
-      return redirect()->route('media.show', $media->id);
+      return redirect()->route('medias.show', $media->id);
     }
 
     /**
@@ -150,6 +149,6 @@ class MediaController extends Controller
       $media->delete();
 
       Session::flash('success', 'News zostal usuniety');
-      return redirect()->route('media.index');
+      return redirect()->route('medias.index');
     }
 }

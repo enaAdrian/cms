@@ -5,10 +5,10 @@
 @section('content')
 
 <div class="row">
-    <div class="col-md-10">
-        <h1>Wszystkie Multimedia</h1>
+    <div class="col-md-8">
+        <h2>Wszystkie Multimedia</h2>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <a href="{{ route('media.create') }}" class="btn btn-lg btn-block btn-primary"  role="button">Dodaj Multimedia</a>
     </div>
     <hr>
@@ -48,9 +48,9 @@
             </tbody>
         </table>
     </div>
-    {{-- <div class="col-md-8 offset-md-4">
+    <div class="col-md-8 offset-md-4">
         {!! $medias->links(); !!}
-    </div> --}}
+    </div>
 </div>
 
 @stop

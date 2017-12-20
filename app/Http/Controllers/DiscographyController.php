@@ -15,9 +15,9 @@ class DiscographyController extends Controller
      */
     public function index()
     {
-        
+
          $discographys = Discography::orderBy('id', 'desc')->paginate(10);
-        
+
 
         return view('discographys.index', compact('discographys'));
 

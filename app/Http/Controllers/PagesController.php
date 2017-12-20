@@ -11,9 +11,9 @@ class PagesController extends Controller
         return view('welcome');
     }
 
-    public function getAbout()
+    public function getMedia()
     {
-        return view('about');
+        return view('media');
     }
 
     public function getContact()
