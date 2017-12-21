@@ -74,7 +74,7 @@ $(document).ready(function(){
                     <li><a href="{{route ('welcome')}}">Strona Główna</a></li>
                     <li><a href="#autor">Autor</a></li>
                     <li><a href="#aktual">Aktualności</a></li>
-                    <li><a href="#dysko">Dyskografia</a></li>
+                    <li><a href="{{route('multimedia')}}">Multimedia</a></li>
                     <li><a href="{{route ('gallery') }}">Galeria</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                   </ul>
@@ -94,7 +94,7 @@ $(document).ready(function(){
                       <div class="col-md-10 col-md-offset-2">
                         <div class="block">
                           <h1 class="animated fadeInUp">Dominik Kozicki</h1>
-                          <p class="animated fadeInUp">Oficjalna strona</p>
+                          <p class="animated fadeInUp">oficjalna strona artysty</p>
                         </div>
                       </div>
             </div>
@@ -137,7 +137,7 @@ $(document).ready(function(){
       <div class="row">
         <div class="col-md-6 col-md-offset-6">
           <p><span style="color: #d0d0d0;">Część jego utwor&oacute;w znalazła się na płytach &bdquo;<a href="multimedia.html">Okna czasu</a>&rdquo;, ponadto na poszerzonej wersji tego albumu "The Windows of Time" oraz (maxi-singlu) "The Dawn" - wydanych (w oparciu o własny budżet) przez Wydawnictwo Fonograficzne <a href="kontakt--wydawca.html">KK&amp;D Records</a>. Muzyka zawarta na tych krążkach odsłania wnętrze kreatywnego autora, aranżera i instrumentalisty..W 2011 r. wprowadza w życie plan nagrania kolejnego albumu z rockowymi utworami przełomu lat 60 i 70 ubiegłego wieku. Projekt powstał z myślą o ocaleniu od zapomnienia wspaniałej muzyki cenionych tw&oacute;rc&oacute;w i wykonawc&oacute;w, m.in.: Led Zeppelin, Deep Purple, Brainbox, Breakout, Czerwone Gitary. Dominik nagrał płytę wsp&oacute;łpracując z wokalistami i instrumentalistami r&oacute;żnych pokoleń (podkarpackiej i krajowej sceny muzycznej). Premierę albumu poprzedziło wydanie singla z (budzącą emocje) wersją utworu pt. "<a href="http://www.youtube.com/watch?v=h-J-4mDqoQM">My z XX wieku</a>" <a href="http://m.trojmiasto.pl/rozrywka/Klenczon-poemat-rockowy-imp303798.html">Krzysztofa Klenczona</a>. W nagraniu płyty wziął udział <a href="http://marekpiekarczyk.pl/">Marek Piekarczyk</a> (TSA) - wokalista, kt&oacute;ry na stałe zapisał się w historii polskiego Rock and Rolla.<br /></span></p>
-          <a href="" class="btn btn-view-works">Albumy</a>
+
         </div>
       </div>
     </div>
@@ -203,7 +203,8 @@ $(document).ready(function(){
                     <p>{{$discography->title}}</p>
                 @endforeach
               </p>
-              <a class="btn btn-default btn-call-to-action" href="#" >Multimedia</a>
+              <br>
+              <a class="btn btn-primary btn-lg" href="{{route('multimedia')}}" >Multimedia</a>
             </div>
           </div>
         </div>
@@ -220,7 +221,7 @@ $(document).ready(function(){
                Płyta "The Dawn"<br>
                Album "Look Behind"<br></br>
                Płytę CD (studyjną) + DVD (live) można uzyskać drogą wysyłkową <br>
-               poprzez zamówienie kierowane do Wydawnictwa Fonograficznego KK&D Records,<br>
+               poprzez zamówienie kierowane do Wydawnictwa Fonograficznego KK&D Records;<br>
                 pod adres e-mail: elgalespl@gmail.com<br>
             </p>
             <br>
@@ -233,42 +234,42 @@ $(document).ready(function(){
 @extends('partrials.footer')
 
 
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-  <script type="text/javascript">$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-      &&
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<script type="text/javascript">$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+    &&
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function() {
+        // Callback after animation
+        // Must change focus!
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+      });
     }
-  });
+  }
+});
 </script>
 </body>
 </html>

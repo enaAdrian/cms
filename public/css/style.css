@@ -361,6 +361,7 @@ header .navbar-default .navbar-nav li a {
   color: #333333;
   margin-top: 30px;
 }
+
 /*Feature*/
 #feature {
   background: url("../img/dominik_8.jpg");
@@ -908,6 +909,31 @@ display: block;
   .gap-right {
     margin-right: 10px;
   }
+  #media {
+    text-align: center;
+    margin-bottom: 10%;
+  }
+  #media .media-title {
+    margin-top: 8%;
+    text-align: left;
+
+  }
+  #media .media-title a{
+    margin-left: 10%;
+  }
+  #media .media-title p{
+    font-size: 32px;
+    font-weight: 400;
+    color: #333333;
+  }
+
+  #media .media-img {
+
+  }
+  #media .media-input{
+    padding-top: 5%;
+  }
+
 /*footer*/
 footer {
   background: rgba(195, 200, 228, 0.863);

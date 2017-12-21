@@ -52,7 +52,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{route ('welcome')}}">Strona Główna</a></li>
-                    <li><a href="">Multimedia</a></li>
+                    <li><a href="{{route ('multimedia')}}">Multimedia</a></li>
                     <li><a href="{{route ('gallery') }}">Galeria</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                   </ul>

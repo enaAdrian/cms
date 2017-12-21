@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Media;
 
 class PagesController extends Controller
 {
@@ -13,7 +14,8 @@ class PagesController extends Controller
 
     public function getMedia()
     {
-        return view('media');
+      $medias = Media::orderBy('id', 'desc')->paginate(10);
+  		return view('multimedia')->with('medias', $medias);
     }
 
     public function getContact()

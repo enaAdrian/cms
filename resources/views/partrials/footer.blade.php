@@ -6,11 +6,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 myCols">
-                    <h5>Strona Główna</h5>
+                    <h5>Aktualnosci</h5>
                     <ul>
-                        <li><a href="{{route ('welcome')}}">Klip</a></li>
-                        <li><a href="{{route ('welcome')}}">O mnie</a></li>
-                        <li><a href="{{route ('welcome')}}">Aktualności</a></li>
+                        <li><a href="">Archiwum</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 myCols">
@@ -32,7 +30,7 @@
                     <ul>
                         <li><a href="#">Producent i wydawca KK&D Records</a></li>
                         <li><a href="#">e-mail: sententia@krak.tke.plcent</a></li>
-                        <li><a href="#">tel. 017 856 76 31</a></li>
+                        <li><a href="#">tel. 664 435 699</a></li>
                     </ul>
                 </div>
             </div>

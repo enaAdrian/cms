@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dominik</title>
+    <title>Multimedia</title>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/owl.carousel.css">
     <link rel="stylesheet" href="/css/bootstrap3.min.css">
@@ -52,7 +52,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{route ('welcome')}}">Strona Główna</a></li>
-                    <li><a href="{{route ('media')}}">Multimedia</a></li>
+                    <li><a href="">Multimedia</a></li>
                     <li><a href="{{route ('gallery') }}">Galeria</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                   </ul>
@@ -63,6 +63,35 @@
         </div>
       </div>
     </header>
+    <div id="background-multi">
+    <section id="media">
+      <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Multimedia</h1>
+        </div>
+    </div>
+    @foreach($medias as $media)
+      <div class="media-input">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="media-img">
+            <div class="circular"><img src="{{ asset('images/' . $media->image) }}" alt=""/>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="media-title" >
+                    <p>{{$media->title}}<a href="{{$media->link}}" class="btn btn-primary" role="button">Zobacz</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    @endforeach
+  </div>
+  </section>
+</div>
     <a name="kontakt"></a>
     @extends('partrials.footer')
 </body>

@@ -30,7 +30,8 @@
                     <ul class="nav navbar-nav">
                       <li><a href="{{ url('/') }}">Strona Głowna</a></li>
                       <li><a href="{{ url('posts') }}">Newsy</a></li>
-                      <li><a href="{{ url('posts/create') }}">Dodaj Newsa</a></li>
+                      <li><a href="{{ url('media') }}">Media</a></li>
+                      <li><a href="{{ url('discography') }}">Dyskografia</a></li>
                     </ul>
 
                 </div>
