@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layouts.navbar')
 
 @section('title', '| View Media')
 
