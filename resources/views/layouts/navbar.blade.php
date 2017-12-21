@@ -29,6 +29,7 @@
 
                     <ul class="nav navbar-nav">
                       <li><a href="{{ url('/') }}">Strona Głowna</a></li>
+                      <li><a href="{{ url('/home') }}">Panel Admin</a></li>
                       <li><a href="{{ url('posts') }}">Newsy</a></li>
                       <li><a href="{{ url('media') }}">Media</a></li>
                       <li><a href="{{ url('discography') }}">Dyskografia</a></li>

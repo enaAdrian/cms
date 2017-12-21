@@ -79,7 +79,7 @@ header .navbar {
   border: 0px;
 }
 header .navbar-brand {
-  padding: 1px 0 3px 20px;
+  padding: 7px 0 5px 30px;
 }
 header .navbar-default {
   background: none;
@@ -292,11 +292,11 @@ header .navbar-default .navbar-nav li a {
 /*service*/
 #service {
   text-align: center;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 #service .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   font-weight: 600;
 }
 #service .service-item {

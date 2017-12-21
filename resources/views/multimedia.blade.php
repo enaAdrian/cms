@@ -82,7 +82,7 @@
         </div>
         <div class="col-md-9">
           <div class="media-title" >
-                    <p>{{$media->title}}<a href="{{$media->link}}" class="btn btn-primary" role="button">Zobacz</a></p>
+                    <p>{{$media->title}}<a href="{{$media->link}}" class="btn btn-primary btn-lg" role="button">Zobacz</a></p>
 
         </div>
       </div>

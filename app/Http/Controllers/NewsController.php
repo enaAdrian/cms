@@ -10,7 +10,7 @@ class NewsController extends Controller
 {
 
 	public function index(){
-		$posts = Post::orderBy('id', 'desc')->paginate(3);
+		$posts = Post::orderBy('id', 'desc')->paginate(4);
 		$discographies = Discography::all();
 		return view('welcome')->with('discographies', $discographies)->with('posts', $posts);
 	}

@@ -40,7 +40,7 @@ class MediaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
       //validation
       $this->validate($request, array(
@@ -68,7 +68,7 @@ class MediaController extends Controller
 
       Session::flash('success', 'News dodano poprawnie!');
 
-      return redirect()->route('medias.show', $media->id);
+      return view('medias.show')->withMedia($media);
 
     }
 
@@ -82,7 +82,7 @@ class MediaController extends Controller
     public function show($id)
     {
       $media =  Media::find($id);
-      return view('medias.show')->withPost($media);
+      return view('medias.show')->withMedia($media);
     }
 
     /**
@@ -94,7 +94,7 @@ class MediaController extends Controller
     public function edit($id)
     {
       $media = Media::find($id);
-      return view('medias.edit')->withPost($media);
+      return view('medias.edit')->withMedia($media);
     }
 
     /**

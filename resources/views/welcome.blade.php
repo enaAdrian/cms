@@ -28,14 +28,14 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	var maxLength = 300;
+	var maxLength = 310;
 	$(".show-read-more").each(function(){
 		var myStr = $(this).text();
 		if($.trim(myStr).length > maxLength){
 			var newStr = myStr.substring(0, maxLength);
 			var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
 			$(this).empty().html(newStr);
-			$(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+			$(this).append(' <a href="javascript:void(0);" class="read-more">zobacz więcej...</a>');
 			$(this).append('<span class="more-text">' + removedStr + '</span>');
 		}
 	});
@@ -64,7 +64,7 @@ $(document).ready(function(){
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="">
                   <img src="img/logo4.png" alt="Logo" >
                 </a>
               </div>
@@ -217,12 +217,36 @@ $(document).ready(function(){
 
           <div class="section-title text-center">
             <h2>Zamów Płytę</h2><br>
-            <p>Płyta "Okna czasu"<br>
-               Płyta "The Dawn"<br>
-               Album "Look Behind"<br></br>
+            <p class="show-read-more">Płyta "Okna czasu"<br>
+               Płyta "The Dawn"
+               Album "Look Behind"
                Płytę CD (studyjną) + DVD (live) można uzyskać drogą wysyłkową <br>
                poprzez zamówienie kierowane do Wydawnictwa Fonograficznego KK&D Records;<br>
                 pod adres e-mail: elgalespl@gmail.com<br>
+              Promocyjny koszt albumu – dwóch płyt (CD „Okna czasu” + DVD z wideoklipem utworu „Daimonion”) wynosi 26,90 zł.
+
+              Koszt płyty CD "Okna czasu" wynosi 23,90 zł.
+
+              Koszt albumu "The Windows of Time" wynosi 29,90 zł.
+
+              Możliwe są następujące formy płatności:
+
+              1. Za pobraniem pocztowym
+              2. Przedpłata na konto bankowe
+
+              Jeżeli wybrany zostanie pkt. 1 - proszę o podanie adresu, na który prześlemy album.
+              Wybierając pkt. 2 odpowiednie dane dot. konta bankowego i adresu wydawnictwa podane zostaną pocztą elektroniczną.
+
+              WYSYŁKA
+              Płyty wysyłamy za pośrednictwem Poczty Polskiej (raz w tygodniu).
+
+              Możliwe są następujące sposoby odbioru i płatności:
+              Przesyłka pobraniowa priorytetowa - koszt 13,50 zł.
+              Przesyłka pobraniowa zwykła - koszt 10,50 zł.
+
+              Przesyłka priorytetowa, opłata przelewem przed wysłaniem - koszt 5,10 zł.
+
+              Klientom z Rzeszowa i okolic proponujemy osobisty odbiór albumu „w mieście” w PHU RESTON Rzeszów ul. Reymonta 7, po wcześniejszym uzgodnieniu.
             </p>
             <br>
             <a href="" class="btn btn-primary btn-lg"  role="button">Zamów</a>
