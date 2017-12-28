@@ -5,13 +5,13 @@
 @section('content')
 
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-9">
         <h2>Wszystkie Newsy</h2>
     </div>
-    <div class="col-md-2" >
+    <div class="col-md-3" >
         <a href="{{ route('posts.create') }}" class="btn btn-lg btn-block btn-primary" role="button">Dodaj Newsa</a>
     </div>
-    <hr>
+    <br>
 </div>
 <div class="row">
     <div class="col-md-12">
@@ -28,8 +28,6 @@
             </thead>
             <tbody>
             @foreach($posts as $post)
-
-
                 <tr>
                     <td scope="row"></td>
                     <td><img src="{{ asset('images/'. $post->image) }}" alt="" style="width:70px; heigh:70px;"></td>
@@ -43,7 +41,6 @@
                     <td></td>
                     <td></td>
                 </tr>
-
             @endforeach
             </tbody>
         </table>

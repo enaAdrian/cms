@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-6">
                 {!! Form::open(['route' =>['discography.destroy', $discography->id], 'method' => 'DELETE']) !!}
-                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) !!}
+                {!! Form::submit('Usuń', ['class' => 'btn btn-danger btn-block']) !!}
                 {!! Form::close() !!}
                 </div>
             </div>

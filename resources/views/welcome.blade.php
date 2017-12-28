@@ -68,6 +68,7 @@ $(document).ready(function(){
                   <img src="img/logo4.png" alt="Logo" >
                 </a>
               </div>
+              <div class="dropdown">
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
@@ -150,7 +151,6 @@ $(document).ready(function(){
           <a name="aktual"></a>
           <div class="section-title">
             <h2>Aktualności</h2>
-
           </div>
         </div>
         @foreach($posts as $post)
@@ -166,6 +166,8 @@ $(document).ready(function(){
                         <h3>{{$post->title}}</h3>
                         <h5><small>Opublikowano: {{date('j-m-Y', strtotime($post->created_at))}}</small></h5>
                         <p class="show-read-more">{{ $post->body }}</p>
+            </div>
+            <div class="style-one">
             </div>
           </div>
         </div>

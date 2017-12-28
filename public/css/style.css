@@ -292,7 +292,7 @@ header .navbar-default .navbar-nav li a {
 /*service*/
 #service {
   text-align: center;
-  padding: 30px 0;
+  margin: 30px 0 30px 0;
 }
 #service .section-title {
   text-align: center;
@@ -300,7 +300,7 @@ header .navbar-default .navbar-nav li a {
   font-weight: 600;
 }
 #service .service-item {
-  padding-bottom: 60px;
+  padding: 30px 0 30px 0;
 }
 #service .service-item i {
   font-size: 60px;
@@ -321,6 +321,13 @@ header .navbar-default .navbar-nav li a {
 .show-read-more .more-text{
     display: none;
   }
+.style-one {
+    margin-top: 10px;
+    border: 0;
+    height: 1px;
+    background: #787586;
+    background-image: linear-gradient(to right, #ccc, #787586, #ccc);
+}
 /*call-to-action*/
 #call-to-action {
   background: url("../img/dominik_7.jpg") no-repeat;

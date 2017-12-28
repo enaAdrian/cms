@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-md-6">
                 {!! Form::open(['route' =>['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
-                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) !!}
+                {!! Form::submit('Usuń', ['class' => 'btn btn-danger btn-block']) !!}
                 {!! Form::close() !!}
                 </div>
             </div>
