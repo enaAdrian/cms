@@ -27,6 +27,7 @@
     <script src="/js/video.js"></script>
 
 <script type="text/javascript">
+// javascript
 $(document).ready(function(){
 	var maxLength = 310;
 	$(".show-read-more").each(function(){
